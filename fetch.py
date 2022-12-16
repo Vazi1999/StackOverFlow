@@ -33,7 +33,6 @@ def fetch_stackoverflow(choice,user_input):
         else:
             print("Request didnt go as planned!" + response.status_code)
     else: #need to pass the code to check it 
-        print("Hello")
         try:
             with open(user_input) as f:
                 code = f.read()

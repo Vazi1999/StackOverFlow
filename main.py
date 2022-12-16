@@ -1,4 +1,5 @@
 from fetch import *
+
 def main():
     print("Would you like to run test on a script or write an error yourself ?\n")
     print("Please enter 0 for a script and 1 for a write error  ")
