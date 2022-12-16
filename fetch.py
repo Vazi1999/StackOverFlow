@@ -18,7 +18,7 @@ def openStack(response):
         link = item["link"]
         webbrowser.open(link, new=2) # open the link with the specified link.   
         counter += 1
-        if counter == 3: # to open only 3 webpages
+        if counter == 3: # to open only 3 webpagess
             break   
 
 def fetch_stackoverflow(choice,user_input):

@@ -9,7 +9,7 @@ if choice == 0:
 elif choice == 1:
     print("Please enter the problem")
     problem = input()
-    #call fetch_stackoverflow
+    #call fetch_stackoverflows
 else:
     print("Wrong input , exiting...")
     exit(1)
