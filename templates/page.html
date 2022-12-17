@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/page.css')}}">
     <title>Document</title>
 </head>
 <body>
@@ -15,17 +15,17 @@
         <h1>You have a problem ?! </h1>
         <h1>Stack Overflow is here to help!</h1>
     </div>
-    <div class = "searchbox">
-        <input type="text" class = "searchbox-input" id = "myInput" placeholder = "Write your problem">
-        <button class="searchButton" role="button" onclick="document.getElementById('myInput').value = ''">Search</button>
-    </div>
+    <form action= "/search" method="get" class = "searchbox">
+        <input type="search" name = "search_query" class = "searchbox-input" id = "myInput" placeholder = "Write your problem">
+        <input type="submit" value="Search" class="searchButton">
+    </form>
     <div class = "browse-text">
         Or look for help in your own code 
     </div>
-    <form action="/submit" method ="post">
-        <label for="file-input" class="browse-button">Browse</label>
-        <input type="file" id="file-input" style="display: none;">
-        <input type="submit"class = "submit-button-style" id ="submit-button" value="Submit">
+    <form action="/upload" method ="post" enctype="multipart/form-data">
+        <label for="files" class="browse-button">Browse</label>
+        <input type="file" name="file" style ="visibility: hidden;"  id = "files" class="browse-button">
+        <input type="submit"class = "submit-button-style" id ="submit-button" value="Upload">
     </form>
     
 </body>

@@ -28,7 +28,7 @@ h1
 .searchbox{
     text-align: center;
 }
-input[type="text"] {
+input[type="search"] {
     width: 30%;
     padding: 12px 20px;
     margin: 8px 0;
