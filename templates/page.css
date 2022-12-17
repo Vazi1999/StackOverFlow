@@ -1,0 +1,257 @@
+body{
+    display:flex;
+    flex-flow: column wrap;
+    padding:0px;
+    margin:0px;
+    background-image: url("background.gif");
+    background-repeat: repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+h1
+{
+    font-family: 'Courier New', Courier, monospace;
+    color :rgb(255, 255, 255);
+    margin:0;
+    padding: 0;
+    text-align: center;
+}
+.header{
+    margin:0;
+    padding: 0;
+    text-align: center;
+    font-size: 90px;
+    font-weight: bold;
+    color: rgb(201, 201, 201);
+    font-family: 'Courier New', Courier, monospace;
+}
+.searchbox{
+    text-align: center;
+}
+input[type="text"] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1.5px solid #00E6F6;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 4%;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight:lighter;
+    color: rgb(255, 255, 255);
+    
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: whitesmoke;
+    opacity: 1; /* Firefox */
+}
+#myInput
+{
+    height:80px;
+    font-size:14pt;
+}
+
+
+
+
+
+/* CSS */
+.searchButton,
+.searchButton:after {
+cursor: pointer ;
+margin-left: 3%;
+width: 150px;
+height: 76px;
+line-height: 78px;
+font-size: 20px;
+font-family: 'Bebas Neue', sans-serif;
+background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+border: 0;
+color: #fff;
+letter-spacing: 3px;
+box-shadow: 6px 0px 0px #00E6F6;
+outline: transparent;
+position: relative;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.searchButton:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'ALTERNATE TEXT';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.searchButton:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .searchButton,
+  .searchButton:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+
+
+
+.browse-text
+{
+    position: absolute;
+    margin-top: 32%;
+    width: 100%;
+    height: 100%;
+    color:  white;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.browse-button{
+    cursor: pointer ;
+    width: 200px;
+    height: 70px;
+    line-height: 78px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    background-color: #00538f;
+    color: white;
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    position: absolute;
+    margin-top: 18%;
+    margin-left: 42%;
+    
+}
+
+#submit-button
+{
+    cursor: pointer ;
+    width: 10%;
+    position: absolute;
+    margin-top: 18%;
+    margin-left: 60%;
+}
+
+/* CSS */
+.submit-button-style {
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.submit-button-style:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.submit-button-style:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .submit-button-style {
+    padding: 16px 48px;
+  }
+}
+
